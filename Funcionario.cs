@@ -14,13 +14,11 @@ namespace DisplayRoutesExercicio
         public string Email{ get; set; }
 
         public List<Cliente> todosClientes = new List<Cliente>();
-        public Cliente()
-        {
-
-        }
+        public Cliente() { }
+        
         public Cliente(string nome, double salario, string funcao, string email)
         {
-            //Id += Id;
+           
             this.Nome = nome;
             this.Salario = salario;
             this.Funcao = funcao;
@@ -37,7 +35,7 @@ namespace DisplayRoutesExercicio
 
         }
 
-       // public override string ToString() => $"{Nome}: {Salario} -> {Funcao}";
+     
         public void Cadastrar()
         {
             Console.Write("Informe o nome do cliente:");
@@ -54,12 +52,9 @@ namespace DisplayRoutesExercicio
            
     }
 
-       
         public void Remover()
         {
             Listar();
-            //Console.WriteLine("Informe o nome do cliente que deseja remover");
-            //int id = int.Parse(Console.ReadLine());
             
             foreach (Cliente cliente in todosClientes)
             {
@@ -71,16 +66,7 @@ namespace DisplayRoutesExercicio
                     todosClientes.Remove(cliente);
                     break;
                 }
-                
             }
-
-
-           // int id = int.Parse(Console.ReadLine());
-           // todosClientes.Remove(i);
-            //Console.WriteLine("Estou no método remover");
-
-
         }
-
     }
 }
